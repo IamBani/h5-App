@@ -1,5 +1,5 @@
 <template>
-<van-swipe height="300" :autoplay="3000" lazy-render>
+<van-swipe :autoplay="3000" class="swipt" lazy-render>
   <van-swipe-item v-for="image in images" :key="image.bannerId">
     <img :src="image.pic" />
   </van-swipe-item>
@@ -21,6 +21,10 @@ axios.get('http://localhost:3000/banner?type=1').then((res) => {
 });
 </script>
 
-<style>
-
+<style lang="less" scoped>
+.swipt{
+  img{
+    width: 100%;
+  }
+}
 </style>
